@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Major+Mono+Display&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./public/styles/variables.css">
+  <link rel="stylesheet" href="./public/styles/reset.css">
+  <link rel="stylesheet" href="./public/styles/main.css">
+  <link rel="stylesheet" href="./public/styles/projetos/projeto.css">
+  <link rel="stylesheet" href="./public/styles/projetos/cards.css">
+  <link rel="stylesheet" href="./public/styles/cadastro/sign.css">
+  <link rel="stylesheet" href="./public/styles/mobile.css">
+  <title>Experimento</title>
+</head>
+
+<body>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Cadastrado com sucesso!</h2>
+      <p>Essa janela ira fechar em 3 segundos ou ao clicar fora da tela</p>
+    </div>
+  </div>
+  <header>
+    <h1><a id="main_rote">ZeloVital</a></h1>
+    <nav>
+      <ul>
+        <!-- <li><a href="#">Contato</a></li> -->
+        <li><a id="project_rote">Projetos</a></li>
+        <li><a id="sign_rote">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="main">
+      <h2>QUEM SOMOS E NOSSA MISSÃO</h2>
+      <article>
+        <h3>SOBRE NÓS</h3>
+        <p>A ZeloVital é uma organização não governamental dedicada à preservação do meio ambiente e à construção de um
+          futuro mais sustentável.</p>
+        <p>
+          Nosso trabalho busca proteger áreas naturais, recuperar regiões degradadas e incentivar comunidades a adotarem
+          práticas mais conscientes no dia a dia. Acreditamos que pequenas atitudes, quando realizadas em conjunto,
+          podem gerar grandes mudanças para o planeta.</p>
+        <p>
+          Por meio de projetos de reflorestamento, educação ambiental, preservação de rios e prosteção da
+          biodiversidade,
+          a ZeloVital atua para aproximar as pessoas da natureza e fortalecer a responsabilidade coletiva com o meio
+          ambiente.</p>
+      </article>
+      <section class="focus">
+        <h2>
+          Nossos Focos
+        </h2>
+        <p>Preservação de rios &amp; reflorestamento</p>
+      </section>
+    </section>
+    <div class="backdrop_img" >
+      <div class="img">
+        <img src="./src/assets/images/icon.png" alt="Icone ZeloVital">
+      </div>
+    </div>
+    <section class="project">
+      <div class="introduce">
+        <h2>NOSSOS PROJETOS</h2>
+        <div>
+          <p>A ZeloVital desenvolve projetos que unem preservação ambiental, educação e ação social, sempre com foco nas
+            pessoas, nos rios e nas comunidades que dependem da natureza.</p>
+        </div>
+      </div>
+      <section class="card_container">
+      <!--          -->
+      </section>
+    </section>
+    <section class="sign_rote">
+      <h2>Cadastro</h2>
+      <form action="post" id="formSign">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <div class="personal_data">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" class="input_text" placeholder="Nome" required>
+          </div>
+          <div class="personal_data">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="input_text" placeholder="Email" required>
+          </div>
+          <div class="personal_data">
+            <label for="data_nasc">Data de Nascimento</label>
+            <input type="date" name="data_nasc" id="data_nasc" class="input_text" required max="2006-06-30" min="1900-01-01">
+          </div>
+          <div class="personal_data">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" class="input_text" required placeholder="000.000.000-00" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+          </div>
+          <div class="personal_data">
+            <label for="telephone">Número de Telefone</label>
+            <input type="text" name="telephone" id="telephone" class="input_text" required placeholder="(00) 00000-0000" maxlength="15" pattern="\(\d{2}\) \d{5}-\d{4}">
+          </div>
+          <div class="personal_data">
+            <label for="social_name">Nome Social</label>
+            <input type="text" name="social_name" id="social_name" class="input_text" required placeholder="Nome Social" >
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Moradia</legend>
+          <div class="personal_data">
+            <!--  -->
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" class="input_text" required placeholder="00000-000" maxlength="9" pattern="[0-9]{5}-[0-9]{3}">
+          </div>
+          <div class="personal_data">
+            <label for="address">Endereço</label>
+            <input type="text" name="address" id="address" class="input_text" placeholder="Endereço" required>
+          </div>
+          <div class="personal_data">
+            <label for="city">Cidade</label>
+            <input type="text" name="city" id="city" class="input_text" placeholder="Cidade" required>
+          </div>
+          <div class="personal_data">
+            <label for="state">Estado</label>
+            <input type="text" name="state" id="state" class="input_text" placeholder="Estado" required>
+          </div>
+        </fieldset>
+        <button type="submit" title="enviar">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <address>
+      <p><strong>Contato:</strong> contato@zelovital.org</p>
+      <p><strong>Telefone:</strong> +55 11 99999-9999</p>
+    </address>
+    <p>Copyright © 2026 ZeloVital. Todos os direitos reservados.</p>
+  </footer>
+  <script src="./src/scripts/cards.js"></script>
+  <script src="./src/scripts/rotes.js"></script>
+  <script src="./src/scripts/submit.js"></script>
+  <script src="./src/scripts/script.js"></script>
+  <script src="./src/scripts/format.js"></script>
+</body>
+</html>
