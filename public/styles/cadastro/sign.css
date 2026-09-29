@@ -1,0 +1,115 @@
+.sign_rote {
+  background-color: var(--background-color);
+  width: var(--width-full);
+  height: var(--height-large);
+  align-items: center;
+}
+
+form {
+  display: flex;
+  width: var(--width-half);
+  gap: var(--gap-small);
+  flex-direction: column;
+  height: var(--height-large);
+  justify-content: space-between;
+}
+
+form h2 {
+  font-size: var(--font-size-large);
+}
+
+form fieldset {
+  border-top: var(--border-width) solid var(--tertiary-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  gap: var(--gap-large);
+}
+
+form fieldset legend {
+  text-align: center;
+  font-size: var(--font-size-medium);
+  margin-bottom: 5rem;
+}
+
+form fieldset .personal_data {
+  position: relative;
+  width: var(--width-full);
+  height: var(--height-medium);
+  background-color: var(--background-color);
+}
+
+form fieldset .personal_data input {
+  background-color: var(--background-color);
+  width: var(--width-full);
+  font-size: var(--font-size-small);
+  height: var(--height-medium);
+  border-bottom: var(--border-width-thick) solid var(--tertiary-color);
+}
+
+form fieldset .personal_data label {
+  color: var(--tertiary-color);
+  position: absolute;
+  top: -10px;
+  text-align: start;
+}
+
+form button {
+  width: var(--width-button);
+  align-self: center;
+  height: var(--height-button);
+  color: var(--tertiary-color);
+  border: var(--border-width) solid var(--tertiary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  font-size: var(--font-size-button);
+}
+
+form button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--hover-color);
+  border-color: var(--hover-color);
+  transition: 0.2s;
+}
+
+form fieldset .personal_data input:valid {
+  border-bottom: var(--border-width-thick) solid var(--verificated-color);
+}
+
+form fieldset .personal_data input:user-invalid {
+  border-bottom: var(--border-width-thick) solid var(--nom-verificated-color);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--width-full);
+  height: var(--width-full);
+  background-color: var(--modal-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--primary-color);
+  padding: var(--modal-padding);
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--modal-shadow);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}

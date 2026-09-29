@@ -1,0 +1,146 @@
+:root {
+  /* Cores principais */
+  --primary-color: #314c37;
+  --primary-color-transparency: #314c37c7;
+  --secondary-color: #627e54;
+  --secondary-color-transparency: #627e54df;
+  --tertiary-color: #446243;
+
+  /* Cores de texto */
+  --font-color: #fff;
+  --font-color-dark: #000;
+  --secondary-font-color: rgba(0, 0, 0, 0.48);
+
+  /* Cores de componentes */
+  --card-color: #f9f3d0;
+  --project-card-color: #f9f3d0;
+  --card-button-trace-color: #3b583d;
+  --card-button-font-color: #59764f;
+  --verificated-color: rgb(71, 104, 197);
+  --nom-verificated-color: rgb(177, 52, 36);
+
+  /* Backgrounds */
+  --background-color: transparent;
+  --background-color-white: rgba(255, 255, 255, 0.5);
+  --modal-background: rgba(0, 0, 0, 0.5);
+
+  /* Cores de interação */
+  --hover-color: #fff;
+  --hover-bg-color: #273323;
+  --hover-border-color: white;
+
+  /* Tipografia */
+  --font-size-large: 2.3rem;
+  --font-size-medium: 2rem;
+  --font-size-small: 1.6rem;
+  --font-size-button: 1.4rem;
+  --font-size-heading: 1.9rem;
+
+  --font-size-navigation: 1.5rem;
+  --font-size-article: 1.8rem;
+  --font-size-focus: 1.8rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-normal: normal;
+
+  /* Espaçamentos */
+  --gap-small: 1rem;
+  --gap-medium: 2rem;
+  --gap-large: 3rem;
+  --gap-section: 1.2rem;
+
+  --padding-header: 0 5rem;
+  --padding-footer: 0 2rem;
+  --padding-section: 0 15rem;
+  --padding-navigation: 0.5rem 2rem;
+  --padding-modal: 20px;
+
+  /* Larguras */
+  --width-full: 100%;
+  --width-half: 50%;
+  --width-card: 70%;
+  --width-card-content: 75%;
+  --width-button: 30%;
+  --width-navigation: 20%;
+  --width-section: 90%;
+  --width-viewport: 100vw;
+
+  /* Alturas */
+  --height-full: 100%;
+  --height-large: 80%;
+  --height-medium: 3.5rem;
+  --height-card: 17rem;
+  --height-button: 3rem;
+
+  --height-header: 74px;
+  --height-footer: 40px;
+  --height-navigation: 100%;
+  --height-navigation-list: 50%;
+  --height-main: 100vh;
+  --height-section: 50%;
+  --height-backdrop: 100%;
+  --height-image: 50rem;
+
+  /* Bordas */
+  --border-radius: 15px;
+  --border-radius-card: 10px;
+  --border-radius-navigation: 20px;
+
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --border-style: solid;
+
+  /* Dimensões e posicionamento */
+  --position-fixed: fixed;
+  --position-absolute: absolute;
+
+  --z-index-header: 1;
+
+  --top-center: 50%;
+  --left-center: 50%;
+
+  --translate-center: translate(-50%, -50%);
+  --translate-image: translateX(-10rem);
+
+  /* Imagens */
+  --header-background-image: url("../../src/assets/images/Lines.svg");
+  --footer-background-image: url("../../src/assets/images/Lines.svg");
+  --backdrop-background-image: url("../../src/assets/images/Semigroundtwo.svg");
+
+  --background-repeat: no-repeat;
+  --backdrop-background-size: 1000px 1000px;
+
+  /* Efeitos */
+  --backdrop-blur: blur(1rem);
+
+  --modal-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  --animation-opacity: opacityI 0.5s ease-in-out;
+  --animation-duration: 0.5s;
+  --animation-timing: ease-in-out;
+
+  --opacity-start: 0;
+  --opacity-end: 1;
+
+  /* Flexbox */
+  --flex-direction-column: column;
+  --flex-direction-row: row;
+
+  --justify-between: space-between;
+  --justify-around: space-around;
+  --justify-center: center;
+  --justify-start: start;
+
+  --align-center: center;
+
+  /* Outros */
+  --text-align-center: center;
+  --text-align-justify: justify;
+  --text-decoration-none: none;
+  --list-style-none: none;
+
+  --cursor-pointer: pointer;
+}

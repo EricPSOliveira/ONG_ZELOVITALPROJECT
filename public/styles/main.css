@@ -1,0 +1,185 @@
+
+/* Header */
+
+header {
+  height: var(--height-header);
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  background-image: var(--header-background-image);
+  padding: var(--padding-header);
+  display: flex;
+  justify-content: var(--justify-between);
+  align-items: var(--align-center);
+  position: var(--position-fixed);
+  z-index: var(--z-index-header);
+  width: var(--width-viewport);
+}
+
+h1 {
+  font-size: var(--font-size-medium);
+}
+
+a {
+  text-decoration: var(--text-decoration-none);
+  cursor: var(--cursor-pointer);
+  color: var(--font-color);
+}
+
+nav {
+  background-color: var(--background-color);
+  width: var(--width-navigation);
+  display: flex;
+  align-items: var(--align-center);
+  height: var(--height-navigation);
+  justify-content: var(--justify-center);
+}
+
+ul {
+  background-color: var(--background-color);
+  width: var(--width-full);
+  height: var(--height-navigation-list);
+  display: flex;
+  justify-content: var(--justify-around);
+  align-items: var(--align-center);
+  text-decoration: var(--text-decoration-none);
+  list-style: var(--list-style-none);
+}
+
+ul li a {
+  background-color: var(--primary-color-transparency);
+  padding: var(--padding-navigation);
+  border-radius: var(--border-radius-navigation);
+  border: var(--border-width) var(--border-style) var(--font-color);
+  font-size: var(--font-size-navigation);
+  color: var(--font-color);
+  display: flex;
+  align-items: var(--align-center);
+  text-align: var(--text-align-center);
+}
+
+ul li a:hover {
+  background-color: var(--secondary-color-transparency);
+}
+
+/* Main */
+
+main {
+  position: var(--position-absolute);
+  top: var(--top-center);
+  left: var(--left-center);
+  transform: var(--translate-center);
+  width: var(--width-viewport);
+  background-color: var(--background-color);
+  display: flex;
+  height: var(--height-main);
+  justify-content: var(--justify-between);
+  align-items: var(--align-center);
+}
+
+section {
+  padding: var(--padding-section);
+  background-color: var(--background-color);
+  width: var(--width-section);
+  height: var(--height-section);
+  display: flex;
+  flex-direction: var(--flex-direction-column);
+  gap: var(--gap-section);
+  text-align: var(--text-align-justify);
+  animation: var(--animation-opacity);
+}
+
+.backdrop_img {
+  animation: var(--animation-opacity);
+}
+
+/* Animação */
+
+@keyframes opacityI {
+  from {
+    opacity: var(--opacity-start);
+  }
+
+  to {
+    opacity: var(--opacity-end);
+  }
+}
+
+/* Títulos e artigos */
+
+h2 {
+  font-size: var(--font-size-large);
+}
+
+article {
+  display: flex;
+  flex-direction: var(--flex-direction-column);
+  gap: var(--gap-small);
+  font-size: var(--font-size-article);
+}
+
+.focus {
+  display: flex;
+  flex-direction: var(--flex-direction-column);
+  gap: var(--gap-small);
+  padding: 0;
+}
+
+.focus h2 {
+  color: var(--secondary-font-color);
+}
+
+.focus p {
+  font-size: var(--font-size-focus);
+}
+
+/* Imagem de fundo */
+
+.backdrop_img {
+  background-image: var(--backdrop-background-image);
+  background-repeat: var(--background-repeat);
+  background-size: var(--backdrop-background-size);
+  background-color: var(--background-color-white);
+  height: var(--height-backdrop);
+  width: var(--width-half);
+  display: flex;
+  align-items: var(--align-center);
+  justify-content: var(--justify-start);
+}
+
+.img {
+  width: var(--width-full);
+  height: var(--height-full, 100%);
+  display: flex;
+  justify-content: var(--justify-center);
+  align-items: var(--align-center);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  backdrop-filter: var(--backdrop-blur);
+}
+
+.backdrop_img img {
+  height: var(--height-image);
+  transform: var(--translate-image);
+  position: var(--position-absolute);
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--primary-color);
+  position: var(--position-fixed);
+  bottom: 0;
+  width: var(--width-viewport);
+  height: var(--height-footer);
+  background-image: var(--footer-background-image);
+  color: var(--font-color);
+  display: flex;
+  align-items: var(--align-center);
+  justify-content: var(--justify-between);
+  padding: var(--padding-footer);
+}
+
+footer address {
+  display: flex;
+  width: var(--width-navigation);
+  justify-content: var(--justify-around);
+}

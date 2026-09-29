@@ -1,0 +1,73 @@
+
+
+.project {
+  width: var(--width-full);
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduce {
+  position: relative;
+  width: var(--width-card);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-small);
+}
+
+.introduce p {
+  width: var(--width-card-content);
+}
+
+.card_container {
+  background-color: var(--background-color);
+  width: var(--width-card);
+  margin: 0;
+  padding: 0;
+  height: var(--width-full);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--gap-large);
+}
+
+.card {
+  position: relative;
+  box-sizing: content-box;
+  background-color: var(--project-card-color);
+  height: var(--height-card);
+  /* width: var(--width-full); */
+  padding: var(--gap-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-medium);
+  border-radius: var(--border-radius-card);
+}
+
+.card h2 {
+  font-size: var(--font-size-heading);
+}
+
+.card p {
+  font-size: var(--font-size-small);
+  width: var(--width-card-content);
+}
+
+.card button {
+  width: var(--width-button);
+  background-color: var(--background-color);
+  font-size: var(--font-size-button);
+  border: var(--border-width) solid var(--card-button-font-color);
+  border-radius: var(--border-radius);
+  height: var(--height-button);
+  color: var(--card-button-font-color);
+  position: absolute;
+  bottom: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: var(--hover-bg-color);
+  border: var(--border-width) solid var(--hover-border-color);
+  color: var(--hover-color);
+}
