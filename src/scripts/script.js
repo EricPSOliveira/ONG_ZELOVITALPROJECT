@@ -23,3 +23,88 @@ itens.map((item, index) => {
   const element = createElement.createElement()
   card_container.appendChild(element);
 })
+
+
+const normalModeButton = document.getElementById("normal-mode");
+const darkModeButton = document.getElementById("dark-mode");
+const highContrastButton = document.getElementById("high-contrast");
+
+const modes = {
+  normal: "normal",
+  dark: "dark",
+  highContrast: "high-contrast"
+};
+
+function updateButtons(activeMode) {
+  normalModeButton.setAttribute(
+    "aria-pressed",
+    activeMode === modes.normal
+  );
+
+  darkModeButton.setAttribute(
+    "aria-pressed",
+    activeMode === modes.dark
+  );
+
+  highContrastButton.setAttribute(
+    "aria-pressed",
+    activeMode === modes.highContrast
+  );
+}
+
+function applyMode(mode) {
+  document.body.classList.remove("dark-mode", "high-contrast", "light-mode");
+
+  if (mode === modes.dark) {
+    document.body.classList.add("dark-mode");
+  }
+
+  if (mode === modes.highContrast) {
+    document.body.classList.add("high-contrast");
+  }
+
+  if (mode === modes.normal) {
+    document.body.classList.add("light-mode");
+  }
+
+  updateButtons(mode);
+  localStorage.setItem("zelovital-accessibility-mode", mode);
+}
+
+function loadMode() {
+  const savedMode = localStorage.getItem("zelovital-accessibility-mode");
+
+  if (
+    savedMode === modes.normal ||
+    savedMode === modes.dark ||
+    savedMode === modes.highContrast
+  ) {
+    applyMode(savedMode);
+    return;
+  }
+
+  const prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  if (prefersDarkMode) {
+    applyMode(modes.dark);
+    return;
+  }
+
+  applyMode(modes.normal);
+}
+
+normalModeButton.addEventListener("click", () => {
+  applyMode(modes.normal);
+});
+
+darkModeButton.addEventListener("click", () => {
+  applyMode(modes.dark);
+});
+
+highContrastButton.addEventListener("click", () => {
+  applyMode(modes.highContrast);
+});
+
+loadMode();

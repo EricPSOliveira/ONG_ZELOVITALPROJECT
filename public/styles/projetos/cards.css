@@ -50,6 +50,7 @@
 .card p {
   font-size: var(--font-size-small);
   width: var(--width-card-content);
+  text-align: start;
 }
 
 .card button {

@@ -1,17 +1,16 @@
 :root {
-  /* Cores principais */
   --primary-color: #314c37;
   --primary-color-transparency: #314c37c7;
   --secondary-color: #627e54;
   --secondary-color-transparency: #627e54df;
   --tertiary-color: #446243;
 
-  /* Cores de texto */
+
   --font-color: #fff;
   --font-color-dark: #000;
   --secondary-font-color: rgba(0, 0, 0, 0.48);
 
-  /* Cores de componentes */
+
   --card-color: #f9f3d0;
   --project-card-color: #f9f3d0;
   --card-button-trace-color: #3b583d;
@@ -19,17 +18,18 @@
   --verificated-color: rgb(71, 104, 197);
   --nom-verificated-color: rgb(177, 52, 36);
 
-  /* Backgrounds */
+
   --background-color: transparent;
+  --button-bg-color: #3b583d;
   --background-color-white: rgba(255, 255, 255, 0.5);
   --modal-background: rgba(0, 0, 0, 0.5);
 
-  /* Cores de interação */
+
   --hover-color: #fff;
   --hover-bg-color: #273323;
   --hover-border-color: white;
 
-  /* Tipografia */
+
   --font-size-large: 2.3rem;
   --font-size-medium: 2rem;
   --font-size-small: 1.6rem;
@@ -46,7 +46,7 @@
 
   --line-height-normal: normal;
 
-  /* Espaçamentos */
+
   --gap-small: 1rem;
   --gap-medium: 2rem;
   --gap-large: 3rem;
@@ -58,17 +58,18 @@
   --padding-navigation: 0.5rem 2rem;
   --padding-modal: 20px;
 
-  /* Larguras */
+
   --width-full: 100%;
   --width-half: 50%;
+  --width-nav-ul: 30%;
   --width-card: 70%;
-  --width-card-content: 75%;
+  --width-card-content: 80%;
   --width-button: 30%;
-  --width-navigation: 20%;
+  --width-navigation: 40%;
   --width-section: 90%;
   --width-viewport: 100vw;
 
-  /* Alturas */
+
   --height-full: 100%;
   --height-large: 80%;
   --height-medium: 3.5rem;
@@ -84,7 +85,7 @@
   --height-backdrop: 100%;
   --height-image: 50rem;
 
-  /* Bordas */
+
   --border-radius: 15px;
   --border-radius-card: 10px;
   --border-radius-navigation: 20px;
@@ -93,7 +94,7 @@
   --border-width-thick: 2px;
   --border-style: solid;
 
-  /* Dimensões e posicionamento */
+
   --position-fixed: fixed;
   --position-absolute: absolute;
 
@@ -105,7 +106,7 @@
   --translate-center: translate(-50%, -50%);
   --translate-image: translateX(-10rem);
 
-  /* Imagens */
+
   --header-background-image: url("../../src/assets/images/Lines.svg");
   --footer-background-image: url("../../src/assets/images/Lines.svg");
   --backdrop-background-image: url("../../src/assets/images/Semigroundtwo.svg");
@@ -113,7 +114,7 @@
   --background-repeat: no-repeat;
   --backdrop-background-size: 1000px 1000px;
 
-  /* Efeitos */
+
   --backdrop-blur: blur(1rem);
 
   --modal-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -125,7 +126,7 @@
   --opacity-start: 0;
   --opacity-end: 1;
 
-  /* Flexbox */
+
   --flex-direction-column: column;
   --flex-direction-row: row;
 
@@ -136,11 +137,35 @@
 
   --align-center: center;
 
-  /* Outros */
+
   --text-align-center: center;
   --text-align-justify: justify;
   --text-decoration-none: none;
   --list-style-none: none;
 
   --cursor-pointer: pointer;
+
+  --access-background: #f9f3d0;
+  --access-text: #1d1d1d;
+  --access-primary: #314c37;
+  --access-secondary: #627e54;
+  --access-card: #ffffff;
+  --access-border: #314c37;
+  --access-focus: #1d1d1d;
+  
+  --dark-background: #121212;
+  --dark-text: #f5f5f5;
+  --dark-primary: #8fb59a;
+  --dark-secondary: #b8d8c0;
+  --dark-card: #1e1e1e;
+  --dark-border: #8fb59a;
+  --dark-focus: #ffffff;
+  
+  --contrast-background: #000000;
+  --contrast-text: #ffffff;
+  --contrast-primary: #ffff00;
+  --contrast-secondary: #00ffff;
+  --contrast-card: #000000;
+  --contrast-border: #ffffff;
+  --contrast-focus: #ffff00;
 }

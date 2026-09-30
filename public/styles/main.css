@@ -1,6 +1,3 @@
-
-/* Header */
-
 header {
   height: var(--height-header);
   background-color: var(--primary-color);
@@ -31,15 +28,15 @@ nav {
   display: flex;
   align-items: var(--align-center);
   height: var(--height-navigation);
-  justify-content: var(--justify-center);
+  justify-content: space-between;
 }
 
 ul {
   background-color: var(--background-color);
-  width: var(--width-full);
+  width: 40%;
   height: var(--height-navigation-list);
   display: flex;
-  justify-content: var(--justify-around);
+  justify-content: var(--justify-between);
   align-items: var(--align-center);
   text-decoration: var(--text-decoration-none);
   list-style: var(--list-style-none);
@@ -60,9 +57,6 @@ ul li a {
 ul li a:hover {
   background-color: var(--secondary-color-transparency);
 }
-
-/* Main */
-
 main {
   position: var(--position-absolute);
   top: var(--top-center);
@@ -87,12 +81,44 @@ section {
   text-align: var(--text-align-justify);
   animation: var(--animation-opacity);
 }
+.accessibility-controls {
+  width: 30%;
+  display: flex;
+  justify-content: var(--justify-between);
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.accessibility-controls h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.accessibility-controls button {
+  background-color: var(--button-bg-color);
+  color: var(--font-color);
+  border: var(--border-width) var(--border-style) var(--font-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  cursor: var(--cursor-pointer);
+  font-size: 0.9rem;
+}
+
+.accessibility-controls button:hover {
+  background-color: var(--secondary-color-transparency);
+}
 
 .backdrop_img {
   animation: var(--animation-opacity);
 }
-
-/* Animação */
 
 @keyframes opacityI {
   from {
@@ -103,8 +129,6 @@ section {
     opacity: var(--opacity-end);
   }
 }
-
-/* Títulos e artigos */
 
 h2 {
   font-size: var(--font-size-large);
@@ -131,8 +155,6 @@ article {
 .focus p {
   font-size: var(--font-size-focus);
 }
-
-/* Imagem de fundo */
 
 .backdrop_img {
   background-image: var(--backdrop-background-image);
@@ -162,8 +184,6 @@ article {
   position: var(--position-absolute);
 }
 
-/* Footer */
-
 footer {
   background-color: var(--primary-color);
   position: var(--position-fixed);
@@ -182,4 +202,218 @@ footer address {
   display: flex;
   width: var(--width-navigation);
   justify-content: var(--justify-around);
+}
+
+body.dark-mode {
+  --access-background: #0a0a0a;
+  --access-text: #f5f5f5;
+  --access-primary: #9ad3aa;
+  --access-secondary: #c7efd1;
+  --access-card: #151515;
+  --access-border: #f5f5f5;
+  --access-focus: #ffffff;
+}
+
+body.dark-mode main {
+  background-color: var(--access-background);
+  color: var(--access-text);
+}
+
+body.dark-mode main section {
+  background-color: var(--access-background);
+  color: var(--access-text);
+}
+
+body.dark-mode main h2,
+body.dark-mode main h3,
+body.dark-mode main p,
+body.dark-mode main label,
+body.dark-mode main legend {
+  color: var(--access-text);
+}
+
+body.dark-mode main .focus h2 {
+  color: var(--access-secondary);
+}
+body.dark-mode header,
+body.dark-mode footer {
+  filter: grayscale(0.4);
+}
+body.dark-mode .card {
+  background-color: rgb(43, 42, 42);
+}
+body.dark-mode .card button {
+  color: white;
+  border-color: white;
+}
+body.dark-mode .card button:hover {
+  color: white;
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.158);
+}
+
+body.dark-mode main a {
+  color: var(--access-primary);
+}
+
+body.dark-mode main .backdrop_img {
+  background-color: #0a0a0a;
+  background-image: none;
+}
+
+body.dark-mode main .img {
+  background-color: #0a0a0a;
+}
+
+body.high-contrast {
+  --access-background: #000000;
+  --access-text: #ffffff;
+  --access-primary: #ffff00;
+  --access-secondary: #00ffff;
+  --access-card: #000000;
+  --access-border: #ffffff;
+  --access-focus: #ffff00;
+}
+
+body.high-contrast main {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.high-contrast main section {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.high-contrast main h2,
+body.high-contrast main h3,
+body.high-contrast main p,
+body.high-contrast main label,
+body.high-contrast main legend {
+  color: #ffffff;
+}
+
+body.high-contrast main .focus h2 {
+  color: #00ffff;
+}
+
+body.high-contrast main a {
+  color: #ffff00;
+  text-decoration: underline;
+}
+
+body.high-contrast main .backdrop_img {
+  background-color: #000000;
+  background-image: none;
+}
+
+body.high-contrast main .img {
+  background-color: #000000;
+}
+
+body.high-contrast main input,
+body.high-contrast main select,
+body.high-contrast main textarea {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.high-contrast main button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+body.high-contrast .card {
+  background-color: black;
+}
+body.high-contrast main button:hover {
+  background-color: #ffff00;
+  color: #000000;
+}
+body.high-contrast header,
+body.high-contrast footer {
+  -webkit-filter: grayscale(1); /* Fallback for older WebKit browsers */
+  filter: grayscale(1);
+}
+
+main button:focus-visible,
+main a:focus-visible,
+main input:focus-visible,
+main select:focus-visible,
+main textarea:focus-visible {
+  outline: 3px solid var(--access-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) {
+    --access-background: #0a0a0a;
+    --access-text: #f5f5f5;
+    --access-primary: #9ad3aa;
+    --access-secondary: #c7efd1;
+    --access-card: #151515;
+    --access-border: #f5f5f5;
+    --access-focus: #ffffff;
+  }
+
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main {
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+  }
+
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main section {
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+  }
+
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main h2,
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main h3,
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main p,
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main label,
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main legend {
+    color: #f5f5f5;
+  }
+
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main .focus h2 {
+    color: #c7efd1;
+  }
+
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main a {
+    color: #9ad3aa;
+  }
+
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main .backdrop_img {
+    background-color: #0a0a0a;
+    background-image: none;
+  }
+
+  body:not(.light-mode):not(.high-contrast):not(.dark-mode) main .img {
+    background-color: #0a0a0a;
+  }
+}
+
+@media (forced-colors: active) {
+  main,
+  main section,
+  main .card {
+    background-color: Canvas;
+    color: CanvasText;
+    border-color: CanvasText;
+  }
+
+  main a,
+  main button {
+    background-color: ButtonFace;
+    color: ButtonText;
+    border: 2px solid ButtonText;
+  }
+
+  main button:focus-visible,
+  main a:focus-visible,
+  main input:focus-visible,
+  main select:focus-visible,
+  main textarea:focus-visible {
+    outline: 3px solid Highlight;
+    outline-offset: 3px;
+  }
 }

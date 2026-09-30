@@ -113,3 +113,15 @@ form fieldset .personal_data input:user-invalid {
   font-size: 20px;
   cursor: pointer;
 }
+body.high-contrast main label{
+  color: white;
+}
+body.high-contrast main form fieldset .personal_data input{
+  border-bottom-color: white;
+}
+
+header a:focus-visible,
+header button:focus-visible {
+  outline: 3px solid var(--font-color);
+  outline-offset: 3px;
+}
