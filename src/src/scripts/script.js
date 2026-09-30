@@ -1,12 +1,13 @@
 import "../../public/styles/reset.css";
 import "../../public/styles/variables.css";
 import "../../public/styles/main.css";
-import "../../public/styles/mobile.css";
 
 import "../../public/styles/cadastro/sign.css";
 
 import "../../public/styles/projetos/cards.css";
 import "../../public/styles/projetos/projeto.css";
+
+import "../../public/styles/mobile.css";
 
 import "./format.js";
 import "./rotes.js";

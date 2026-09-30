@@ -24,18 +24,19 @@
   width: var(--width-card);
   margin: 0;
   padding: 0;
-  height: var(--width-full);
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: var(--gap-large);
+  row-gap: var(--gap-medium);
 }
 
 .card {
   position: relative;
-  box-sizing: content-box;
+  box-sizing: border-box;
   background-color: var(--project-card-color);
   height: var(--height-card);
-  /* width: var(--width-full); */
+  min-width: 0;
   padding: var(--gap-medium);
   display: flex;
   flex-direction: column;
