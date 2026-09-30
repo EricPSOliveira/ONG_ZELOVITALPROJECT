@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -16,128 +16,107 @@
   <link rel="stylesheet" href="./public/styles/projetos/cards.css">
   <link rel="stylesheet" href="./public/styles/cadastro/sign.css">
   <link rel="stylesheet" href="./public/styles/mobile.css">
-  <title>Experimento</title>
+  <title>ZeloVital</title>
 </head>
 
 <body>
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <h2>Cadastrado com sucesso!</h2>
-      <p>Essa janela ira fechar em 3 segundos ou ao clicar fora da tela</p>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    aria-describedby="modal-description">
+    <div class="modal-content"> <button type="button" class="close-button" aria-label="Fechar mensagem"> <span
+          aria-hidden="true">&times;</span> </button>
+      <h2 id="modal-title">Cadastrado com sucesso!</h2>
+      <p id="modal-description"> Essa janela irá fechar em 3 segundos ou ao clicar fora da tela. </p>
     </div>
   </div>
   <header>
-    <h1><a id="main_rote">ZeloVital</a></h1>
-    <nav>
+    <h1> <a id="main_rote" href="#inicio" aria-label="ZeloVital - página inicial"> ZeloVital </a> </h1>
+    <nav aria-label="Navegação principal">
       <ul>
-        <!-- <li><a href="#">Contato</a></li> -->
-        <li><a id="project_rote">Projetos</a></li>
-        <li><a id="sign_rote">Cadastro</a></li>
+        <li> <a id="project_rote" href="#projetos"> Projetos </a> </li>
+        <li> <a id="sign_rote" href="#cadastro"> Cadastro </a> </li>
       </ul>
+      <div class="accessibility-controls" aria-labelledby="accessibility-title">
+        <button type="button" id="normal-mode" aria-pressed="true"> Claro </button>
+        <button type="button" id="dark-mode" aria-pressed="false"> Escuro </button>
+        <button type="button" id="high-contrast" aria-pressed="false"> Alto contraste </button>
+      </div>
     </nav>
   </header>
-  <main>
-    <section class="main">
-      <h2>QUEM SOMOS E NOSSA MISSÃO</h2>
-      <article>
-        <h3>SOBRE NÓS</h3>
-        <p>A ZeloVital é uma organização não governamental dedicada à preservação do meio ambiente e à construção de um
-          futuro mais sustentável.</p>
-        <p>
-          Nosso trabalho busca proteger áreas naturais, recuperar regiões degradadas e incentivar comunidades a adotarem
-          práticas mais conscientes no dia a dia. Acreditamos que pequenas atitudes, quando realizadas em conjunto,
-          podem gerar grandes mudanças para o planeta.</p>
-        <p>
-          Por meio de projetos de reflorestamento, educação ambiental, preservação de rios e prosteção da
-          biodiversidade,
-          a ZeloVital atua para aproximar as pessoas da natureza e fortalecer a responsabilidade coletiva com o meio
-          ambiente.</p>
+  <main id="inicio">
+    <section class="main" aria-labelledby="titulo-quem-somos">
+      <h2 id="titulo-quem-somos"> QUEM SOMOS E NOSSA MISSÃO </h2>
+      <article aria-labelledby="titulo-sobre-nos">
+        <h3 id="titulo-sobre-nos"> SOBRE NÓS </h3>
+        <p> A ZeloVital é uma organização não governamental dedicada à preservação do meio ambiente e à construção de um
+          futuro mais sustentável. </p>
+        <p> Nosso trabalho busca proteger áreas naturais, recuperar regiões degradadas e incentivar comunidades a
+          adotarem práticas mais conscientes no dia a dia. Acreditamos que pequenas atitudes, quando realizadas em
+          conjunto, podem gerar grandes mudanças para o planeta. </p>
+        <p> Por meio de projetos de reflorestamento, educação ambiental, preservação de rios e proteção da
+          biodiversidade, a ZeloVital atua para aproximar as pessoas da natureza e fortalecer a responsabilidade
+          coletiva com o meio ambiente. </p>
       </article>
-      <section class="focus">
-        <h2>
-          Nossos Focos
-        </h2>
-        <p>Preservação de rios &amp; reflorestamento</p>
+      <section class="focus" aria-labelledby="titulo-focos">
+        <h2 id="titulo-focos"> Nossos Focos </h2>
+        <p> Preservação de rios &amp; reflorestamento </p>
       </section>
     </section>
-    <div class="backdrop_img" >
-      <div class="img">
-        <img src="./src/assets/images/icon.png" alt="Icone ZeloVital">
-      </div>
+    <div class="backdrop_img">
+      <div class="img"> <img src="./src/assets/images/icon.png" alt="Logotipo da ZeloVital"> </div>
     </div>
-    <section class="project">
+    <section class="project" id="projetos" aria-labelledby="titulo-projetos">
       <div class="introduce">
-        <h2>NOSSOS PROJETOS</h2>
+        <h2 id="titulo-projetos"> NOSSOS PROJETOS </h2>
         <div>
-          <p>A ZeloVital desenvolve projetos que unem preservação ambiental, educação e ação social, sempre com foco nas
-            pessoas, nos rios e nas comunidades que dependem da natureza.</p>
+          <p> A ZeloVital desenvolve projetos que unem preservação ambiental, educação e ação social, sempre com foco
+            nas pessoas, nos rios e nas comunidades que dependem da natureza. </p>
         </div>
       </div>
-      <section class="card_container">
-      <!--          -->
-      </section>
+      <section class="card_container" aria-label="Lista de projetos da ZeloVital"> </section>
     </section>
-    <section class="sign_rote">
-      <h2>Cadastro</h2>
+    <section class="sign_rote" id="cadastro" aria-labelledby="titulo-cadastro">
+      <h2 id="titulo-cadastro"> Cadastro </h2>
       <form action="post" id="formSign">
         <fieldset>
           <legend>Dados Pessoais</legend>
-          <div class="personal_data">
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="name" class="input_text" placeholder="Nome" required>
-          </div>
-          <div class="personal_data">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="input_text" placeholder="Email" required>
-          </div>
-          <div class="personal_data">
-            <label for="data_nasc">Data de Nascimento</label>
-            <input type="date" name="data_nasc" id="data_nasc" class="input_text" required max="2006-06-30" min="1900-01-01">
-          </div>
-          <div class="personal_data">
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" class="input_text" required placeholder="000.000.000-00" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
-          </div>
-          <div class="personal_data">
-            <label for="telephone">Número de Telefone</label>
-            <input type="text" name="telephone" id="telephone" class="input_text" required placeholder="(00) 00000-0000" maxlength="15" pattern="\(\d{2}\) \d{5}-\d{4}">
-          </div>
-          <div class="personal_data">
-            <label for="social_name">Nome Social</label>
-            <input type="text" name="social_name" id="social_name" class="input_text" required placeholder="Nome Social" >
-          </div>
+          <div class="personal_data"> <label for="name"> Nome </label> <input type="text" name="name" id="name"
+              class="input_text" placeholder="Nome" autocomplete="name" required> </div>
+          <div class="personal_data"> <label for="email"> Email </label> <input type="email" name="email" id="email"
+              class="input_text" placeholder="Email" autocomplete="email" required> </div>
+          <div class="personal_data"> <label for="data_nasc"> Data de Nascimento </label> <input type="date"
+              name="data_nasc" id="data_nasc" class="input_text" autocomplete="bday" required max="2006-06-30"
+              min="1900-01-01"> </div>
+          <div class="personal_data"> <label for="cpf"> CPF </label> <input type="text" name="cpf" id="cpf"
+              class="input_text" required placeholder="000.000.000-00" maxlength="14" inputmode="numeric"
+              autocomplete="off" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"> </div>
+          <div class="personal_data"> <label for="telephone"> Número de Telefone </label> <input type="tel"
+              name="telephone" id="telephone" class="input_text" required placeholder="(00) 00000-0000" maxlength="15"
+              autocomplete="tel" inputmode="tel" pattern="\(\d{2}\) \d{5}-\d{4}"> </div>
+          <div class="personal_data"> <label for="social_name"> Nome Social </label> <input type="text"
+              name="social_name" id="social_name" class="input_text" required placeholder="Nome Social"
+              autocomplete="nickname"> </div>
         </fieldset>
         <fieldset>
           <legend>Moradia</legend>
-          <div class="personal_data">
-            <!--  -->
-            <label for="cep">CEP</label>
-            <input type="text" name="cep" id="cep" class="input_text" required placeholder="00000-000" maxlength="9" pattern="[0-9]{5}-[0-9]{3}">
-          </div>
-          <div class="personal_data">
-            <label for="address">Endereço</label>
-            <input type="text" name="address" id="address" class="input_text" placeholder="Endereço" required>
-          </div>
-          <div class="personal_data">
-            <label for="city">Cidade</label>
-            <input type="text" name="city" id="city" class="input_text" placeholder="Cidade" required>
-          </div>
-          <div class="personal_data">
-            <label for="state">Estado</label>
-            <input type="text" name="state" id="state" class="input_text" placeholder="Estado" required>
-          </div>
-        </fieldset>
-        <button type="submit" title="enviar">Enviar</button>
+          <div class="personal_data"> <label for="cep"> CEP </label> <input type="text" name="cep" id="cep"
+              class="input_text" required placeholder="00000-000" maxlength="9" inputmode="numeric"
+              autocomplete="postal-code" pattern="[0-9]{5}-[0-9]{3}"> </div>
+          <div class="personal_data"> <label for="address"> Endereço </label> <input type="text" name="address"
+              id="address" class="input_text" placeholder="Endereço" required> </div>
+          <div class="personal_data"> <label for="city"> Cidade </label> <input type="text" name="city" id="city"
+              class="input_text" placeholder="Cidade" autocomplete="address-level2" required> </div>
+          <div class="personal_data"> <label for="state"> Estado </label> <input type="text" name="state" id="state"
+              class="input_text" placeholder="Estado" autocomplete="address-level1" required> </div>
+        </fieldset> <button type="submit" title="Enviar cadastro"> Enviar </button>
       </form>
     </section>
   </main>
   <footer>
     <address>
-      <p><strong>Contato:</strong> contato@zelovital.org</p>
-      <p><strong>Telefone:</strong> +55 11 99999-9999</p>
+      <p> <strong>Contato:</strong> contato@zelovital.org </p>
+      <p> <strong>Telefone:</strong> +55 11 99999-9999 </p>
     </address>
-    <p>Copyright © 2026 ZeloVital. Todos os direitos reservados.</p>
+    <p> Copyright © 2026 ZeloVital. Todos os direitos reservados. </p>
   </footer>
   <script src="./src/scripts/cards.js"></script>
   <script src="./src/scripts/rotes.js"></script>
@@ -145,4 +124,5 @@
   <script src="./src/scripts/script.js"></script>
   <script src="./src/scripts/format.js"></script>
 </body>
+
 </html>
